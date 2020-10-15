@@ -5,9 +5,13 @@
   "main": "dist/regaliz.cjs.js",
   "module": "dist/regaliz.esm.js",
   "browser": "dist/regaliz.iife.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rollup -c",
-    "test": "jest"
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "rollup -c -m",
+    "build": "npm run build:types && npm run build:js",
+    "test": "jest",
+    "prepare": "npm run build"
   },
   "author": "Carlos Perez Gutierrez",
   "license": "ISC",
