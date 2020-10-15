@@ -9,7 +9,7 @@
   "scripts": {
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "rollup -c -m",
-    "build": "npm run build:types && npm run build:js",
+    "build": "rm -rf dist && npm run build:types && npm run build:js",
     "test": "jest",
     "prepare": "npm run build"
   },
