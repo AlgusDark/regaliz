@@ -11,6 +11,25 @@ test("Can create a Tree from an Array", () => {
     {
       expected: [1],
     },
+    {
+      expected: [
+        1,
+        2,
+        3,
+        4,
+        5,
+        null,
+        6,
+        7,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        8,
+      ],
+    },
   ];
 
   for (let index = 0; index < fixtures.length; index++) {

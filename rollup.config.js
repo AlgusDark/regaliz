@@ -22,6 +22,13 @@ export default {
       name: "Regaliz",
       globals: {},
     },
+    {
+      file: "dist/regaliz.iife.min.js",
+      format: "iife",
+      name: "Regaliz",
+      globals: {},
+      plugins: [terser()],
+    },
   ],
   external: [...Object.keys(pkg.dependencies || {})],
   plugins: [
